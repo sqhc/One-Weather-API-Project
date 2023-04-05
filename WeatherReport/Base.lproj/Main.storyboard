@@ -42,6 +42,22 @@
             </objects>
             <point key="canvasLocation" x="558" y="-1306"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6SV-C1-lnp">
+            <objects>
+                <viewController storyboardIdentifier="CurrentWeather" id="xfJ-7z-jX1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBu-88-EXY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ITm-1J-GPc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u4T-K7-doa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LaF-fv-yU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1132" y="879"/>
+        </scene>
         <!--Search for Weathers-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -90,6 +106,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search for Weathers" id="hH2-zo-dEj"/>
+                    <connections>
+                        <segue destination="xfJ-7z-jX1" kind="show" identifier="currentWeather" id="Iq6-EV-GD7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

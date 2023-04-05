@@ -12,17 +12,32 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        initVM()
     }
 
+    var viewModel : SearchWeathersViewModel = {
+        SearchWeathersViewModel()
+    }()
+    
+    func initVM(){
+        viewModel.getAuthorization()
+    }
+    
     @IBAction func unitChoose(_ sender: UISegmentedControl){
-//        switch sender.selectedSegmentIndex{
-//        case 0:
-//            
-//        }
+        switch sender.selectedSegmentIndex{
+        case 0:
+            viewModel.unit = "standard"
+        case 1:
+            viewModel.unit = "metric"
+        case 2:
+            viewModel.unit = "imperial"
+        default:
+            viewModel.unit = ""
+        }
     }
     
     @IBAction func searchCurrent(_ sender: UIButton){
-        LocationManager.shared.getLocation()
+        viewModel.getLocation()
     }
 }
 
