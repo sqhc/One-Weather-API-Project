@@ -16,18 +16,54 @@ class APIManager: NSObject{
         super.init()
     }
     
-    func searchOption(url: String, option: SearchOptions){
-        switch option {
-        case .currentWeather:
-            decodeCurrentWeatherData()
+    func searchOption(url: String, option: SearchOptions, complete: @escaping (_ success: Bool, _ result: Any?, _ errorMessage: String?)->()){
+        guard let link = URL(string: url) else{
+            complete(false, nil, "The generate of URL failed")
+            return
+        }
+        getData(url: link) {[weak self] success, data, error in
+            if success{
+                switch option {
+                case .currentWeather:
+                    self?.decodeCurrentWeatherData(data: data!, complete: { success, weather, errorMessage in
+                        if success{
+                            complete(true, weather, nil)
+                        }
+                        else{
+                            complete(false, nil, errorMessage)
+                        }
+                    })
+                }
+            }
+            else{
+                complete(false, nil, error)
+            }
         }
     }
     
-    func getData(){
-        
+    func getData(url: URL, complete: @escaping (_ success: Bool, _ data: Data?, _ error: String?)->()){
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if error != nil{
+                complete(false, nil, error?.localizedDescription)
+            }
+            guard let data = data else {
+                complete(false, nil, "The Data not exist")
+                return
+            }
+            complete(true, data, nil)
+
+        }
+        task.resume()
     }
     
-    func decodeCurrentWeatherData(){
-        
+    func decodeCurrentWeatherData(data: Data, complete: @escaping (_ success: Bool, _ weather: CurrentWeather?, _ errorMessage: String?)->()){
+        do{
+            let decoder = JSONDecoder()
+            let weather = try decoder.decode(CurrentWeather.self, from: data)
+            complete(true, weather, nil)
+        }
+        catch{
+            complete(false, nil, error.localizedDescription)
+        }
     }
 }
