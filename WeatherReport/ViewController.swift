@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func unitChoose(_ sender: UISegmentedControl){
+//        switch sender.selectedSegmentIndex{
+//        case 0:
+//            
+//        }
+    }
+    
+    @IBAction func searchCurrent(_ sender: UIButton){
+        LocationManager.shared.getLocation()
+    }
 }
 

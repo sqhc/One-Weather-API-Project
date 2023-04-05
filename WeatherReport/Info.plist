@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Are you allowed the app to get location for the weather and other search?</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Are you allowed the app to get location for the weather and other search?</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Are you allowed the app to get location for the weather and other search?</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
