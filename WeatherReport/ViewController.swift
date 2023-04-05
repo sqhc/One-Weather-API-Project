@@ -38,6 +38,10 @@ class ViewController: UIViewController {
     
     @IBAction func searchCurrent(_ sender: UIButton){
         viewModel.getLocation()
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "CurrentWeather") as? CurrentWeatherView{
+            vc.viewModel.delegate = self.viewModel
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

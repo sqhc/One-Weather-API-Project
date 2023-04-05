@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="558" y="-1306"/>
         </scene>
-        <!--View Controller-->
+        <!--Current Weather View-->
         <scene sceneID="6SV-C1-lnp">
             <objects>
-                <viewController storyboardIdentifier="CurrentWeather" id="xfJ-7z-jX1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrentWeather" id="xfJ-7z-jX1" customClass="CurrentWeatherView" customModule="WeatherReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xBu-88-EXY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
