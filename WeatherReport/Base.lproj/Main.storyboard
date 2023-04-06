@@ -457,23 +457,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current weather search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzt-vh-M8g">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current weather search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzt-vh-M8g">
                                 <rect key="frame" x="20" y="116" width="374" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="8kM-ed-Fq8"/>
+                                    <constraint firstAttribute="width" constant="374" id="FJ0-wD-VB1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="014-Fe-ObQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="014-Fe-ObQ">
                                 <rect key="frame" x="20" y="161" width="38" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="emz-em-nba">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="emz-em-nba">
                                 <rect key="frame" x="66" y="157" width="328" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Kelvin"/>
                                     <segment title="Celsius"/>
@@ -483,18 +484,51 @@
                                     <action selector="unitChoose:" destination="BYZ-38-t0r" eventType="valueChanged" id="hlf-Wd-rss"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGp-nc-GFS">
-                                <rect key="frame" x="85" y="221" width="244" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGp-nc-GFS">
+                                <rect key="frame" x="108" y="223" width="198.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" image="location.magnifyingglass" catalog="system" title="Get location and search"/>
                                 <connections>
                                     <action selector="searchCurrent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i6W-jW-hQD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 day weather Forecast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufu-vi-Msl">
+                                <rect key="frame" x="20" y="264" width="374" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="eoP-nr-h0t"/>
+                                    <constraint firstAttribute="height" constant="37" id="ybV-3u-QBJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRf-Je-Q5t">
+                                <rect key="frame" x="103" y="311" width="208" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="location.magnifyingglass" catalog="system" title="Get location and forecast"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FGp-nc-GFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="34L-0T-3v2"/>
+                            <constraint firstItem="emz-em-nba" firstAttribute="top" secondItem="hzt-vh-M8g" secondAttribute="bottom" constant="4" id="5bq-UT-yaw"/>
+                            <constraint firstItem="FGp-nc-GFS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-209.5" id="7E0-ZR-Mwt"/>
+                            <constraint firstItem="014-Fe-ObQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8C4-9c-y1k"/>
+                            <constraint firstItem="hzt-vh-M8g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Gt-hL-uuF"/>
+                            <constraint firstItem="MRf-Je-Q5t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Tb-Av-dl3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hzt-vh-M8g" secondAttribute="trailing" constant="20" id="ANc-Wk-nZi"/>
+                            <constraint firstItem="MRf-Je-Q5t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-121.5" id="IxU-ez-1wi"/>
+                            <constraint firstItem="Ufu-vi-Msl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KkO-jK-CX6"/>
+                            <constraint firstItem="FGp-nc-GFS" firstAttribute="top" secondItem="emz-em-nba" secondAttribute="bottom" constant="35" id="Qub-kd-s1b"/>
+                            <constraint firstItem="hzt-vh-M8g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="TND-1l-ICf"/>
+                            <constraint firstItem="Ufu-vi-Msl" firstAttribute="top" secondItem="014-Fe-ObQ" secondAttribute="bottom" constant="81" id="U3n-4O-ZQV"/>
+                            <constraint firstItem="014-Fe-ObQ" firstAttribute="top" secondItem="hzt-vh-M8g" secondAttribute="bottom" constant="8" symbolic="YES" id="U6N-5d-7fg"/>
+                            <constraint firstItem="MRf-Je-Q5t" firstAttribute="top" secondItem="Ufu-vi-Msl" secondAttribute="bottom" constant="10" id="c9A-hH-bgl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="emz-em-nba" secondAttribute="trailing" constant="20" id="iO2-C6-rSC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ufu-vi-Msl" secondAttribute="trailing" constant="20" id="jjd-KY-TwG"/>
+                            <constraint firstItem="emz-em-nba" firstAttribute="leading" secondItem="014-Fe-ObQ" secondAttribute="trailing" constant="8" symbolic="YES" id="l5D-lo-liy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search for Weathers" id="hH2-zo-dEj"/>
                     <connections>

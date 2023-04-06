@@ -92,6 +92,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0600B10429DF51CC0019CD51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0600B0FC29DD11D80019CD51 /* WeatherDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0600B10529DF51E90019CD51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0656070029DCB7A800969B01 /* ViewController.swift */,
+				0600B10029DDF7C10019CD51 /* CurrentWeatherView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0600B10629DF521F0019CD51 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				0600B0F829DD02CC0019CD51 /* SearchWeathersViewModel.swift */,
+				0600B10229DDF8830019CD51 /* CurrentWeatherViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		065606F029DCB7A800969B01 = {
 			isa = PBXGroup;
 			children = (
@@ -117,19 +143,17 @@
 			children = (
 				065606FC29DCB7A800969B01 /* AppDelegate.swift */,
 				065606FE29DCB7A800969B01 /* SceneDelegate.swift */,
-				0656070029DCB7A800969B01 /* ViewController.swift */,
-				0600B0F829DD02CC0019CD51 /* SearchWeathersViewModel.swift */,
-				0600B10029DDF7C10019CD51 /* CurrentWeatherView.swift */,
-				0600B10229DDF8830019CD51 /* CurrentWeatherViewModel.swift */,
 				0656070229DCB7A800969B01 /* Main.storyboard */,
 				0656070829DCB7C200969B01 /* Assets.xcassets */,
 				0656070A29DCB7C200969B01 /* LaunchScreen.storyboard */,
 				0656070D29DCB7C200969B01 /* Info.plist */,
 				0656070529DCB7A800969B01 /* WeatherReport.xcdatamodeld */,
-				0600B0F629DCFA4D0019CD51 /* LocationManager.swift */,
 				0600B0FA29DD03A00019CD51 /* Global.swift */,
-				0600B0FC29DD11D80019CD51 /* WeatherDataModel.swift */,
+				0600B0F629DCFA4D0019CD51 /* LocationManager.swift */,
 				0600B0FE29DD1F060019CD51 /* APIManager.swift */,
+				0600B10429DF51CC0019CD51 /* Model */,
+				0600B10529DF51E90019CD51 /* View */,
+				0600B10629DF521F0019CD51 /* View Model */,
 			);
 			path = WeatherReport;
 			sourceTree = "<group>";
