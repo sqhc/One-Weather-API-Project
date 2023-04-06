@@ -423,6 +423,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u4T-K7-doa"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="kFr-PM-erq" id="3jg-zn-ewD"/>
+                        <outlet property="cityMapView" destination="wAl-Og-t5u" id="FxF-4e-aQ8"/>
+                        <outlet property="cloudlinessLabel" destination="RGK-9g-aQx" id="XzV-OZ-U9m"/>
+                        <outlet property="descriptionLabel" destination="Mia-Xb-iZ9" id="3Ub-0p-e1L"/>
+                        <outlet property="feelsLikeTempLabel" destination="19c-Cg-csu" id="3ml-S0-c5Y"/>
+                        <outlet property="highestTempLabel" destination="aib-Gd-s54" id="eDp-Hy-r6N"/>
+                        <outlet property="humidityLabel" destination="bMT-OF-z1q" id="GoF-v1-pR3"/>
+                        <outlet property="minimumTempLabel" destination="uVI-4x-3VG" id="nZ7-XN-u35"/>
+                        <outlet property="pressureLabel" destination="btp-WZ-GRD" id="rNG-9z-oSl"/>
+                        <outlet property="rainOneHourLabel" destination="zVg-e4-AJH" id="E1M-zI-Lt4"/>
+                        <outlet property="rainThreeHourLabel" destination="QsU-rA-4wP" id="rTV-ZO-E8W"/>
+                        <outlet property="snowOneHourLabel" destination="K1J-RC-7Km" id="7tW-S7-QzI"/>
+                        <outlet property="snowThreeHourLabel" destination="1K5-fP-TN3" id="tjN-fb-F5P"/>
+                        <outlet property="temperatureLabel" destination="hVr-T7-r3K" id="NVg-Ug-1Sd"/>
+                        <outlet property="weatherImageView" destination="twT-GQ-4op" id="FdQ-oS-o7V"/>
+                        <outlet property="weatherLabel" destination="bcX-aG-eYM" id="Q3I-zs-rhx"/>
+                        <outlet property="windDegreeLabel" destination="Lsk-OS-Agd" id="pVX-07-ek7"/>
+                        <outlet property="windGustLabel" destination="ICc-ry-fQa" id="nOh-Rh-By9"/>
+                        <outlet property="windSpeedLabel" destination="IHh-oy-izz" id="jXa-Rc-Tcg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaF-fv-yU1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
