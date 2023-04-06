@@ -15,6 +15,11 @@ class ViewController: UIViewController {
         initVM()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        currentWeatherAPI = "https://api.openweathermap.org/data/2.5/weather?appid=a897735e313bdc198b3364fc1753da0b"
+    }
+    
     var viewModel : SearchWeathersViewModel = {
         SearchWeathersViewModel()
     }()
