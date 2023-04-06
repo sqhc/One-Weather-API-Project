@@ -449,6 +449,22 @@
             </objects>
             <point key="canvasLocation" x="-1133.3333333333335" y="878.57142857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="VSS-IS-hNh">
+            <objects>
+                <viewController storyboardIdentifier="ForecastWeather" id="8Rf-xM-Ge6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tds-Bc-HLL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CMT-No-GfF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B9l-UQ-1wp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAR-as-9iq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-342" y="879"/>
+        </scene>
         <!--Search for Weathers-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -506,6 +522,9 @@
                                 <rect key="frame" x="103" y="311" width="208" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="location.magnifyingglass" catalog="system" title="Get location and forecast"/>
+                                <connections>
+                                    <action selector="forecastCurrent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqt-o5-X6q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -533,6 +552,7 @@
                     <navigationItem key="navigationItem" title="Search for Weathers" id="hH2-zo-dEj"/>
                     <connections>
                         <segue destination="xfJ-7z-jX1" kind="show" identifier="currentWeather" id="Iq6-EV-GD7"/>
+                        <segue destination="8Rf-xM-Ge6" kind="show" identifier="forecastWeather" id="Eh4-9n-GPB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -48,5 +48,9 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    @IBAction func forecastCurrent(_ sender: UIButton){
+        
+    }
 }
 
