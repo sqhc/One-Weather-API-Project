@@ -14,7 +14,13 @@ class CurrentWeatherViewModel: NSObject{
     var manager = APIManager.shared
     var location : CLLocation!
     var unit: String = ""
-    var weather : CurrentWeather!
+    var weather : CurrentWeather!{
+        didSet{
+            setUpData?()
+        }
+    }
+    
+    var setUpData : (()->Void)?
     
     weak var delegate : SearchWeathersVMDelegate!
     
