@@ -130,7 +130,7 @@ class CurrentWeatherView: UIViewController {
     func setupMapView(){
         let annotation = MKPointAnnotation()
         annotation.title = viewModel.weather.name ?? "Unknown"
-        annotation.coordinate = viewModel.location.coordinate
+        annotation.coordinate = CLLocationCoordinate2D(latitude: viewModel.weather.coord.lat ?? 0.0, longitude: viewModel.weather.coord.lon ?? 0.0)
         cityMapView.addAnnotation(annotation)
         
         let identifier = "CurrentWeatherCity"

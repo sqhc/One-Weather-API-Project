@@ -33,6 +33,16 @@ class APIManager: NSObject{
                             complete(false, nil, errorMessage)
                         }
                     })
+                case .forecastWeathers:
+                    self?.decodeForecastWeathersData(data: data!, complete: {
+                        success, forecast, errorMessgae in
+                        if success{
+                            complete(true, forecast, nil)
+                        }
+                        else{
+                            complete(false, nil, errorMessgae)
+                        }
+                    })
                 }
             }
             else{
@@ -61,6 +71,17 @@ class APIManager: NSObject{
             let decoder = JSONDecoder()
             let weather = try decoder.decode(CurrentWeather.self, from: data)
             complete(true, weather, nil)
+        }
+        catch{
+            complete(false, nil, error.localizedDescription)
+        }
+    }
+    
+    func decodeForecastWeathersData(data: Data, complete: @escaping (_ success: Bool, _ forecast: ForecastWeathers?, _ errorMessgae: String?)->()){
+        do{
+            let decoder = JSONDecoder()
+            let forecast = try decoder.decode(ForecastWeathers.self, from: data)
+            complete(true, forecast, nil)
         }
         catch{
             complete(false, nil, error.localizedDescription)

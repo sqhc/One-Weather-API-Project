@@ -449,10 +449,10 @@
             </objects>
             <point key="canvasLocation" x="-1133.3333333333335" y="878.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Forecast Weathers View-->
         <scene sceneID="VSS-IS-hNh">
             <objects>
-                <viewController storyboardIdentifier="ForecastWeather" id="8Rf-xM-Ge6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForecastWeather" id="8Rf-xM-Ge6" customClass="ForecastWeathersView" customModule="WeatherReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tds-Bc-HLL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
