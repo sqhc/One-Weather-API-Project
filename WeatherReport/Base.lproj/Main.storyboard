@@ -461,7 +461,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="forecast" rowHeight="513" id="dXH-br-96E">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="forecast" rowHeight="513" id="dXH-br-96E" customClass="ForecastWeatherCell" customModule="WeatherReport" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="513"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dXH-br-96E" id="Gqj-jc-CGt">
@@ -725,6 +725,22 @@
                                                 <constraint firstItem="I95-SI-0UG" firstAttribute="leading" secondItem="Gqj-jc-CGt" secondAttribute="leadingMargin" id="wTd-Io-ACJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ForecastCloudlinessLabel" destination="kv9-2i-dAr" id="gd7-Vj-bqr"/>
+                                            <outlet property="ForecastDateLabel" destination="qf7-FX-Zya" id="exX-5z-ceO"/>
+                                            <outlet property="ForecastDirectionLabel" destination="a2S-lW-1Hk" id="MOW-V2-Bzf"/>
+                                            <outlet property="ForecastFeelLikeLabel" destination="vZ7-tw-lCk" id="jV3-qr-UEV"/>
+                                            <outlet property="ForecastGustLabel" destination="dwZ-xI-Qfk" id="RRr-8J-lg2"/>
+                                            <outlet property="ForecastHighestTemperatureLabel" destination="q2r-x5-Nmg" id="Vqr-5A-hTz"/>
+                                            <outlet property="ForecastHumidityLabel" destination="Sk5-Wj-SRq" id="bbj-FV-Ws5"/>
+                                            <outlet property="ForecastMainWeatherLabel" destination="yPY-7G-XTI" id="AnH-dc-Hbn"/>
+                                            <outlet property="ForecastMiniTemperatureLabel" destination="pIf-mq-TmW" id="u6d-cf-s8w"/>
+                                            <outlet property="ForecastPressureLabel" destination="hZG-pL-hzL" id="HK4-al-lqU"/>
+                                            <outlet property="ForecastSpeedLabel" destination="ImA-nt-XuJ" id="8qz-FR-RWY"/>
+                                            <outlet property="ForecastWeatherDescriptionLabel" destination="Ekf-h0-paO" id="Lws-Jc-Pnv"/>
+                                            <outlet property="ForecastWeatherImageView" destination="rCe-JA-9Mu" id="u1q-TB-tSz"/>
+                                            <outlet property="ForecastWeatherTemperatureLabel" destination="tKy-bf-q2U" id="LJy-rQ-8gD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -739,6 +755,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B9l-UQ-1wp"/>
+                    <connections>
+                        <outlet property="forecastWeathersTableView" destination="cCl-Pb-PMU" id="BPc-VQ-os0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAR-as-9iq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

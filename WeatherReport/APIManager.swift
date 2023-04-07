@@ -84,7 +84,7 @@ class APIManager: NSObject{
             complete(true, forecast, nil)
         }
         catch{
-            complete(false, nil, error.localizedDescription)
+            complete(false, nil, String(describing: error))
         }
     }
 }

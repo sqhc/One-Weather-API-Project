@@ -14,7 +14,7 @@ struct ForecastWeathers: Codable{
 
 struct ForecastWeather: Codable{
     let main: ForecastMain?
-    let weather: ForecastWInfo?
+    let weather: [ForecastWInfo]?
     let clouds: ForecastClouds?
     let wind: ForecastWind?
     let dt_txt: String?
