@@ -824,6 +824,41 @@
                                     <action selector="forecastCurrent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqt-o5-X6q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search through city name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLL-g5-3Vh">
+                                <rect key="frame" x="20" y="369" width="374" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="CPE-0f-TUZ"/>
+                                    <constraint firstAttribute="height" constant="37" id="yPd-xV-jkM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uZ9-QZ-7l6">
+                                <rect key="frame" x="20" y="414" width="374" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Vqj-lO-oBa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Act-bv-O7W">
+                                <rect key="frame" x="20" y="456" width="374" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj7-4m-Z0w">
+                                <rect key="frame" x="20" y="513" width="154" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get current weather"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwH-Tp-b6a">
+                                <rect key="frame" x="251" y="513" width="143" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forecast weathers"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -835,16 +870,31 @@
                             <constraint firstItem="hzt-vh-M8g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Gt-hL-uuF"/>
                             <constraint firstItem="MRf-Je-Q5t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Tb-Av-dl3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hzt-vh-M8g" secondAttribute="trailing" constant="20" id="ANc-Wk-nZi"/>
+                            <constraint firstItem="Act-bv-O7W" firstAttribute="top" secondItem="uZ9-QZ-7l6" secondAttribute="bottom" constant="8" symbolic="YES" id="CdA-3d-q3f"/>
+                            <constraint firstItem="UwH-Tp-b6a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80.5" id="Ey3-fR-IRJ"/>
+                            <constraint firstItem="Aj7-4m-Z0w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80.5" id="FAl-FK-crU"/>
+                            <constraint firstItem="Act-bv-O7W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IL1-zk-ZES"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Act-bv-O7W" secondAttribute="trailing" constant="20" id="ITw-7L-IBf"/>
                             <constraint firstItem="MRf-Je-Q5t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-121.5" id="IxU-ez-1wi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yLL-g5-3Vh" secondAttribute="trailing" constant="20" id="Kfr-xE-atv"/>
                             <constraint firstItem="Ufu-vi-Msl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KkO-jK-CX6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uZ9-QZ-7l6" secondAttribute="trailing" constant="20" id="MWX-fW-n12"/>
+                            <constraint firstItem="UwH-Tp-b6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="115.5" id="NeK-0F-UF4"/>
+                            <constraint firstItem="uZ9-QZ-7l6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OdL-dc-43n"/>
+                            <constraint firstItem="Act-bv-O7W" firstAttribute="top" secondItem="uZ9-QZ-7l6" secondAttribute="bottom" constant="8" symbolic="YES" id="Qge-SJ-9T2"/>
                             <constraint firstItem="FGp-nc-GFS" firstAttribute="top" secondItem="emz-em-nba" secondAttribute="bottom" constant="35" id="Qub-kd-s1b"/>
                             <constraint firstItem="hzt-vh-M8g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="TND-1l-ICf"/>
                             <constraint firstItem="Ufu-vi-Msl" firstAttribute="top" secondItem="014-Fe-ObQ" secondAttribute="bottom" constant="81" id="U3n-4O-ZQV"/>
                             <constraint firstItem="014-Fe-ObQ" firstAttribute="top" secondItem="hzt-vh-M8g" secondAttribute="bottom" constant="8" symbolic="YES" id="U6N-5d-7fg"/>
+                            <constraint firstItem="yLL-g5-3Vh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UIB-VB-oo8"/>
+                            <constraint firstItem="Aj7-4m-Z0w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-110" id="VtQ-1N-Yn2"/>
                             <constraint firstItem="MRf-Je-Q5t" firstAttribute="top" secondItem="Ufu-vi-Msl" secondAttribute="bottom" constant="10" id="c9A-hH-bgl"/>
+                            <constraint firstItem="yLL-g5-3Vh" firstAttribute="top" secondItem="MRf-Je-Q5t" secondAttribute="bottom" constant="27" id="cQC-i7-Sht"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="emz-em-nba" secondAttribute="trailing" constant="20" id="iO2-C6-rSC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ufu-vi-Msl" secondAttribute="trailing" constant="20" id="jjd-KY-TwG"/>
+                            <constraint firstItem="Aj7-4m-Z0w" firstAttribute="top" secondItem="Act-bv-O7W" secondAttribute="bottom" constant="23" id="l0i-ea-oXN"/>
                             <constraint firstItem="emz-em-nba" firstAttribute="leading" secondItem="014-Fe-ObQ" secondAttribute="trailing" constant="8" symbolic="YES" id="l5D-lo-liy"/>
+                            <constraint firstItem="uZ9-QZ-7l6" firstAttribute="top" secondItem="yLL-g5-3Vh" secondAttribute="bottom" constant="8" symbolic="YES" id="rkV-Bd-pSK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search for Weathers" id="hH2-zo-dEj"/>
@@ -870,6 +920,9 @@
         <image name="wind" catalog="system" width="128" height="103"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
