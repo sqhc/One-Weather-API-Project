@@ -22,6 +22,10 @@
 		0649ED5629E1F120002A1ABB /* GeocodeDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED5529E1F11F002A1ABB /* GeocodeDataModels.swift */; };
 		0649ED5829E1F6BF002A1ABB /* SearchGeocodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED5729E1F6BF002A1ABB /* SearchGeocodeView.swift */; };
 		0649ED5A29E1F8EB002A1ABB /* SearchGeocodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED5929E1F8EB002A1ABB /* SearchGeocodeViewModel.swift */; };
+		0649ED5C29E20962002A1ABB /* CityGeocodeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED5B29E20962002A1ABB /* CityGeocodeTableView.swift */; };
+		0649ED5E29E20992002A1ABB /* CityGeocodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED5D29E20992002A1ABB /* CityGeocodeCell.swift */; };
+		0649ED6029E20A9A002A1ABB /* CityGeocodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED5F29E20A9A002A1ABB /* CityGeocodesViewModel.swift */; };
+		0649ED6229E20ACC002A1ABB /* CityGeocodeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED6129E20ACC002A1ABB /* CityGeocodeCellModel.swift */; };
 		065606FD29DCB7A800969B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065606FC29DCB7A800969B01 /* AppDelegate.swift */; };
 		065606FF29DCB7A800969B01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065606FE29DCB7A800969B01 /* SceneDelegate.swift */; };
 		0656070129DCB7A800969B01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656070029DCB7A800969B01 /* ViewController.swift */; };
@@ -67,6 +71,10 @@
 		0649ED5529E1F11F002A1ABB /* GeocodeDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeDataModels.swift; sourceTree = "<group>"; };
 		0649ED5729E1F6BF002A1ABB /* SearchGeocodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGeocodeView.swift; sourceTree = "<group>"; };
 		0649ED5929E1F8EB002A1ABB /* SearchGeocodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGeocodeViewModel.swift; sourceTree = "<group>"; };
+		0649ED5B29E20962002A1ABB /* CityGeocodeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodeTableView.swift; sourceTree = "<group>"; };
+		0649ED5D29E20992002A1ABB /* CityGeocodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodeCell.swift; sourceTree = "<group>"; };
+		0649ED5F29E20A9A002A1ABB /* CityGeocodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodesViewModel.swift; sourceTree = "<group>"; };
+		0649ED6129E20ACC002A1ABB /* CityGeocodeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodeCellModel.swift; sourceTree = "<group>"; };
 		065606F929DCB7A800969B01 /* WeatherReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065606FC29DCB7A800969B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		065606FE29DCB7A800969B01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +134,8 @@
 				0649ED4D29DF9F24002A1ABB /* ForecastWeathersView.swift */,
 				0649ED5329DFA652002A1ABB /* ForecastWeatherCell.swift */,
 				0649ED5729E1F6BF002A1ABB /* SearchGeocodeView.swift */,
+				0649ED5B29E20962002A1ABB /* CityGeocodeTableView.swift */,
+				0649ED5D29E20992002A1ABB /* CityGeocodeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,6 +148,8 @@
 				0649ED4F29DF9F66002A1ABB /* ForecastWeathersTableViewModel.swift */,
 				0649ED5129DF9F83002A1ABB /* ForecastWeatherCellViewModel.swift */,
 				0649ED5929E1F8EB002A1ABB /* SearchGeocodeViewModel.swift */,
+				0649ED5F29E20A9A002A1ABB /* CityGeocodesViewModel.swift */,
+				0649ED6129E20ACC002A1ABB /* CityGeocodeCellModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -330,18 +342,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0649ED5E29E20992002A1ABB /* CityGeocodeCell.swift in Sources */,
 				0656070129DCB7A800969B01 /* ViewController.swift in Sources */,
+				0649ED6029E20A9A002A1ABB /* CityGeocodesViewModel.swift in Sources */,
 				0600B0F929DD02CC0019CD51 /* SearchWeathersViewModel.swift in Sources */,
 				065606FD29DCB7A800969B01 /* AppDelegate.swift in Sources */,
 				0600B10129DDF7C10019CD51 /* CurrentWeatherView.swift in Sources */,
 				0649ED5629E1F120002A1ABB /* GeocodeDataModels.swift in Sources */,
 				0600B0FF29DD1F060019CD51 /* APIManager.swift in Sources */,
 				0600B0F729DCFA4D0019CD51 /* LocationManager.swift in Sources */,
+				0649ED5C29E20962002A1ABB /* CityGeocodeTableView.swift in Sources */,
 				0649ED4E29DF9F25002A1ABB /* ForecastWeathersView.swift in Sources */,
 				0600B0FD29DD11D80019CD51 /* WeatherDataModel.swift in Sources */,
 				0600B10829DF5CB90019CD51 /* ForecastWeatherDataModel.swift in Sources */,
 				0649ED5229DF9F83002A1ABB /* ForecastWeatherCellViewModel.swift in Sources */,
 				0649ED5829E1F6BF002A1ABB /* SearchGeocodeView.swift in Sources */,
+				0649ED6229E20ACC002A1ABB /* CityGeocodeCellModel.swift in Sources */,
 				0656070729DCB7A800969B01 /* WeatherReport.xcdatamodeld in Sources */,
 				0649ED5429DFA652002A1ABB /* ForecastWeatherCell.swift in Sources */,
 				065606FF29DCB7A800969B01 /* SceneDelegate.swift in Sources */,
