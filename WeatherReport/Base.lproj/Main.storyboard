@@ -82,14 +82,83 @@
                     <view key="view" contentMode="scaleToFill" id="ljZ-H1-wEj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search with city name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lc8-c3-Ghx">
+                                <rect key="frame" x="20" y="88" width="374" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="7nN-gA-CHg"/>
+                                    <constraint firstAttribute="width" constant="374" id="xQ7-Hb-lCO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-LB-NgJ">
+                                <rect key="frame" x="20" y="133" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Fsf-yG-6QY"/>
+                                    <constraint firstAttribute="width" constant="374" id="RQE-vz-gKO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-9y-sOW">
+                                <rect key="frame" x="114" y="189" width="188" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="mappin.circle.fill" catalog="system" title="Search with city name"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search with zip number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AY-0e-4Hb">
+                                <rect key="frame" x="20" y="267" width="374" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="NVW-9T-bIo"/>
+                                    <constraint firstAttribute="width" constant="374" id="ok3-xF-Uon"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVN-UF-aVo">
+                                <rect key="frame" x="20" y="312" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="vb6-L4-HKi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47w-vu-Nj1">
+                                <rect key="frame" x="119" y="369" width="179" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="mappin.and.ellipse" catalog="system" title="Search with zip code"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XjA-44-B8L"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="8AY-0e-4Hb" firstAttribute="top" secondItem="Ih0-9y-sOW" secondAttribute="bottom" constant="47" id="62h-oK-Gm9"/>
+                            <constraint firstItem="47w-vu-Nj1" firstAttribute="centerX" secondItem="ljZ-H1-wEj" secondAttribute="centerX" constant="1.5" id="AxB-d3-I00"/>
+                            <constraint firstItem="XjA-44-B8L" firstAttribute="trailing" secondItem="LVA-LB-NgJ" secondAttribute="trailing" constant="20" id="Oyl-vf-cXk"/>
+                            <constraint firstItem="lc8-c3-Ghx" firstAttribute="top" secondItem="XjA-44-B8L" secondAttribute="top" id="SxT-O1-lj1"/>
+                            <constraint firstItem="47w-vu-Nj1" firstAttribute="centerY" secondItem="ljZ-H1-wEj" secondAttribute="centerY" constant="-63.5" id="TCQ-gt-YGu"/>
+                            <constraint firstItem="Ih0-9y-sOW" firstAttribute="centerY" secondItem="ljZ-H1-wEj" secondAttribute="centerY" constant="-243.5" id="TDo-Yg-LI2"/>
+                            <constraint firstItem="jVN-UF-aVo" firstAttribute="leading" secondItem="XjA-44-B8L" secondAttribute="leading" constant="20" id="YTq-oT-hg0"/>
+                            <constraint firstItem="XjA-44-B8L" firstAttribute="trailing" secondItem="lc8-c3-Ghx" secondAttribute="trailing" constant="20" id="blq-xl-6Pb"/>
+                            <constraint firstItem="XjA-44-B8L" firstAttribute="trailing" secondItem="jVN-UF-aVo" secondAttribute="trailing" constant="20" id="heG-2T-64K"/>
+                            <constraint firstItem="47w-vu-Nj1" firstAttribute="top" secondItem="jVN-UF-aVo" secondAttribute="bottom" constant="23" id="jHo-bU-jmx"/>
+                            <constraint firstItem="LVA-LB-NgJ" firstAttribute="top" secondItem="lc8-c3-Ghx" secondAttribute="bottom" constant="8" symbolic="YES" id="kdj-Zs-uDt"/>
+                            <constraint firstItem="8AY-0e-4Hb" firstAttribute="leading" secondItem="XjA-44-B8L" secondAttribute="leading" constant="20" id="n6X-VO-6zT"/>
+                            <constraint firstItem="Ih0-9y-sOW" firstAttribute="centerX" secondItem="ljZ-H1-wEj" secondAttribute="centerX" constant="1" id="oBP-Fo-Wbq"/>
+                            <constraint firstItem="LVA-LB-NgJ" firstAttribute="leading" secondItem="XjA-44-B8L" secondAttribute="leading" constant="20" id="rGl-sp-4Zz"/>
+                            <constraint firstItem="jVN-UF-aVo" firstAttribute="top" secondItem="8AY-0e-4Hb" secondAttribute="bottom" constant="8" symbolic="YES" id="s5T-wa-C0j"/>
+                            <constraint firstItem="lc8-c3-Ghx" firstAttribute="leading" secondItem="XjA-44-B8L" secondAttribute="leading" constant="20" id="vpO-g7-0Xr"/>
+                            <constraint firstItem="Ih0-9y-sOW" firstAttribute="top" secondItem="LVA-LB-NgJ" secondAttribute="bottom" constant="22" id="xcB-D8-29t"/>
+                            <constraint firstItem="XjA-44-B8L" firstAttribute="trailing" secondItem="8AY-0e-4Hb" secondAttribute="trailing" constant="20" id="yAm-FP-3k6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search for geocodes" id="idG-tb-DiT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4M-YW-epi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1809" y="151"/>
+            <point key="canvasLocation" x="1808.6956521739132" y="150.66964285714286"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eo5-jd-XvV">
@@ -994,10 +1063,15 @@
         <image name="humidity.fill" catalog="system" width="128" height="98"/>
         <image name="location.magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="map.circle" catalog="system" width="128" height="121"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>
         <image name="snowflake" catalog="system" width="121" height="128"/>
         <image name="wind" catalog="system" width="128" height="103"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
