@@ -11,14 +11,19 @@ import CoreLocation
 protocol SearchWeathersVMDelegate: AnyObject{
     func sendLoaction()-> CLLocation
     func sendUnit()-> String
+    func sendOption()-> caseOption
+    func sendCity()-> String
+    func sendCountryCode()-> String
 }
 
 class SearchWeathersViewModel: NSObject{
     
     var locationManager = LocationManager.shared
-    
     var unit = ""
     var location : CLLocation!
+    var option : caseOption!
+    var city = ""
+    var countryCode = ""
     
     override init() {
         super.init()
@@ -43,5 +48,15 @@ extension SearchWeathersViewModel: SearchWeathersVMDelegate{
         return self.unit
     }
     
+    func sendOption() -> caseOption {
+        return self.option
+    }
     
+    func sendCity() -> String {
+        self.city
+    }
+    
+    func sendCountryCode() -> String {
+        self.countryCode
+    }
 }

@@ -9,9 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var countryCodeTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        cityTextField.delegate = self
+        countryCodeTextField.delegate = self
+        
         initVM()
     }
 
@@ -44,6 +51,7 @@ class ViewController: UIViewController {
     
     @IBAction func searchCurrent(_ sender: UIButton){
         viewModel.getLocation()
+        viewModel.option = .current
         if let vc = storyboard?.instantiateViewController(withIdentifier: "CurrentWeather") as? CurrentWeatherView{
             vc.viewModel.delegate = self.viewModel
             self.navigationController?.pushViewController(vc, animated: true)
@@ -52,10 +60,61 @@ class ViewController: UIViewController {
     
     @IBAction func forecastCurrent(_ sender: UIButton){
         viewModel.getLocation()
+        viewModel.option = .current
         if let vc = storyboard?.instantiateViewController(withIdentifier: "ForecastWeather") as? ForecastWeathersView{
             vc.viewModel.delegate = self.viewModel
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+    @IBAction func currentCityWeather(_ sender: UIButton){
+        viewModel.option = .city
+        if viewModel.city != ""{
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "CurrentWeather") as? CurrentWeatherView{
+                vc.viewModel.delegate = self.viewModel
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+        else{
+            let alertView = UIAlertController(title: "Can not locate!", message: "At least fill city name please...", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+            alertView.addAction(alertAction)
+            self.present(alertView, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func forecastCityWeathers(_ sender: UIButton){
+        viewModel.option = .city
+        if viewModel.city != ""{
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "ForecastWeather") as? ForecastWeathersView{
+                vc.viewModel.delegate = self.viewModel
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+        else{
+            let alertView = UIAlertController(title: "Can not locate!", message: "At least fill city name please...", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+            alertView.addAction(alertAction)
+            self.present(alertView, animated: true, completion: nil)
+        }
+    }
 }
 
+extension ViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let value = textField.text else{
+            return true
+        }
+        
+        switch textField{
+        case cityTextField:
+            viewModel.city = value
+        case countryCodeTextField:
+            viewModel.countryCode = value
+        default:
+            return true
+        }
+        
+        return true
+    }
+}

@@ -29,15 +29,33 @@ class CurrentWeatherViewModel: NSObject{
     }
     
     func formAPI(){
-        location = delegate.sendLoaction()
-        currentWeatherAPI += "&lat=\(location.coordinate.latitude)"
-        currentWeatherAPI += "&lon=\(location.coordinate.longitude)"
-        unit = delegate.sendUnit()
-        switch unit{
-        case "":
-            return
-        default:
-            currentWeatherAPI += "&units=\(unit)"
+        switch delegate.sendOption(){
+        case .current:
+            location = delegate.sendLoaction()
+            currentWeatherAPI += "&lat=\(location.coordinate.latitude)"
+            currentWeatherAPI += "&lon=\(location.coordinate.longitude)"
+            unit = delegate.sendUnit()
+            switch unit{
+            case "":
+                return
+            default:
+                currentWeatherAPI += "&units=\(unit)"
+            }
+        case .city:
+            currentWeatherAPI += "&q=\(delegate.sendCity())"
+            switch delegate.sendCountryCode(){
+            case "":
+                return
+            default:
+                currentWeatherAPI += ",\(delegate.sendCountryCode())"
+            }
+            unit = delegate.sendUnit()
+            switch unit{
+            case "":
+                return
+            default:
+                currentWeatherAPI += "&units=\(unit)"
+            }
         }
     }
     

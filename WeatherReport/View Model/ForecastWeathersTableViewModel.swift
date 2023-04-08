@@ -21,15 +21,33 @@ class ForecastWeathersTableViewModel: NSObject{
     }
     
     func formAPI(){
-        location = delegate.sendLoaction()
-        forecastWeathersAPI += "&lat=\(location.coordinate.latitude)"
-        forecastWeathersAPI += "&lon=\(location.coordinate.longitude)"
-        unit = delegate.sendUnit()
-        switch unit{
-        case "":
-            return
-        default:
-            forecastWeathersAPI += "&units=\(unit)"
+        switch delegate.sendOption(){
+        case .current:
+            location = delegate.sendLoaction()
+            forecastWeathersAPI += "&lat=\(location.coordinate.latitude)"
+            forecastWeathersAPI += "&lon=\(location.coordinate.longitude)"
+            unit = delegate.sendUnit()
+            switch unit{
+            case "":
+                return
+            default:
+                forecastWeathersAPI += "&units=\(unit)"
+            }
+        case .city:
+            forecastWeathersAPI += "&q=\(delegate.sendCity())"
+            switch delegate.sendCountryCode(){
+            case "":
+                return
+            default:
+                forecastWeathersAPI += ",\(delegate.sendCountryCode())"
+            }
+            unit = delegate.sendUnit()
+            switch unit{
+            case "":
+                return
+            default:
+                forecastWeathersAPI += "&units=\(unit)"
+            }
         }
     }
     

@@ -148,7 +148,7 @@ class CurrentWeatherView: UIViewController {
     
     func setMapRegion(){
         let span : MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let region : MKCoordinateRegion = MKCoordinateRegion.init(center: viewModel.location.coordinate, span: span)
+        let region : MKCoordinateRegion = MKCoordinateRegion.init(center: CLLocationCoordinate2D(latitude: viewModel.weather.coord.lat ?? 0.0, longitude: viewModel.weather.coord.lon ?? 0.0), span: span)
         cityMapView.setRegion(region, animated: true)
     }
 }

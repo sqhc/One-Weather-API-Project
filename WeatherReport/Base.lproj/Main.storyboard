@@ -853,11 +853,17 @@
                                 <rect key="frame" x="20" y="513" width="154" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get current weather"/>
+                                <connections>
+                                    <action selector="currentCityWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CTl-YG-mXS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwH-Tp-b6a">
                                 <rect key="frame" x="251" y="513" width="143" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forecast weathers"/>
+                                <connections>
+                                    <action selector="forecastCityWeathers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YF9-Zh-FeC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -899,6 +905,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search for Weathers" id="hH2-zo-dEj"/>
                     <connections>
+                        <outlet property="cityTextField" destination="uZ9-QZ-7l6" id="jBn-Ad-pcU"/>
+                        <outlet property="countryCodeTextField" destination="Act-bv-O7W" id="hBk-wA-p86"/>
                         <segue destination="xfJ-7z-jX1" kind="show" identifier="currentWeather" id="Iq6-EV-GD7"/>
                         <segue destination="8Rf-xM-Ge6" kind="show" identifier="forecastWeather" id="Eh4-9n-GPB"/>
                     </connections>
