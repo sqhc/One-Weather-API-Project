@@ -25,6 +25,72 @@
             </objects>
             <point key="canvasLocation" x="-342" y="-581"/>
         </scene>
+        <!--Air pollution-->
+        <scene sceneID="rgi-eC-YJy">
+            <objects>
+                <navigationController id="2ck-lX-5We" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Air pollution" image="aqi.medium" catalog="system" id="4g2-8O-S9k"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qlJ-lW-g3i">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="q2t-W0-EE0" kind="relationship" relationship="rootViewController" id="vfN-UQ-1Dy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ms4-1u-PKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="-581"/>
+        </scene>
+        <!--Geocode-->
+        <scene sceneID="7NT-Uz-jCC">
+            <objects>
+                <navigationController id="iUU-lM-284" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Geocode" image="map.circle" catalog="system" id="OMA-jB-cgB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5YZ-Uc-dWI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="S66-pG-k2h" kind="relationship" relationship="rootViewController" id="sUO-O3-4bt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNO-WR-rZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="-581"/>
+        </scene>
+        <!--Search for air pollution-->
+        <scene sceneID="QMY-3z-NHv">
+            <objects>
+                <viewController id="q2t-W0-EE0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gn7-J0-S3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OOt-9t-6Aa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search for air pollution" id="42U-tM-feT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pp-go-joF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="151"/>
+        </scene>
+        <!--Search for geocodes-->
+        <scene sceneID="BnF-Ac-FJB">
+            <objects>
+                <viewController id="S66-pG-k2h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ljZ-H1-wEj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XjA-44-B8L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search for geocodes" id="idG-tb-DiT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4M-YW-epi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="151"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eo5-jd-XvV">
             <objects>
@@ -36,6 +102,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="ydC-ut-TyQ" kind="relationship" relationship="viewControllers" id="Lvd-8R-97m"/>
+                        <segue destination="2ck-lX-5We" kind="relationship" relationship="viewControllers" id="Hlw-Xq-N9Q"/>
+                        <segue destination="iUU-lM-284" kind="relationship" relationship="viewControllers" id="OFJ-Le-g3F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKE-Sr-kZp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -917,6 +985,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="aqi.medium" catalog="system" width="128" height="120"/>
         <image name="cloud" catalog="system" width="128" height="88"/>
         <image name="cloud.fill" catalog="system" width="128" height="88"/>
         <image name="cloud.rain" catalog="system" width="125" height="128"/>
@@ -924,6 +993,7 @@
         <image name="humidity" catalog="system" width="128" height="98"/>
         <image name="humidity.fill" catalog="system" width="128" height="98"/>
         <image name="location.magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="map.circle" catalog="system" width="128" height="121"/>
         <image name="snowflake" catalog="system" width="121" height="128"/>
         <image name="wind" catalog="system" width="128" height="103"/>
         <systemColor name="systemBackgroundColor">
