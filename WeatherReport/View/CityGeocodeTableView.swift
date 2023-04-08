@@ -8,7 +8,7 @@
 import UIKit
 
 class CityGeocodeTableView: UIViewController {
-
+    @IBOutlet weak var cityGeocodesTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

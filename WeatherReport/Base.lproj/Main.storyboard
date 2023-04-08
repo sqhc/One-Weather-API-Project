@@ -171,7 +171,7 @@
             </objects>
             <point key="canvasLocation" x="1808.6956521739132" y="150.66964285714286"/>
         </scene>
-        <!--City Geocode Table View-->
+        <!--Geocoders of the city-->
         <scene sceneID="moA-jX-GgK">
             <objects>
                 <viewController storyboardIdentifier="CityGeocodes" id="Hoh-SZ-boK" customClass="CityGeocodeTableView" customModule="WeatherReport" customModuleProvider="target" sceneMemberID="viewController">
@@ -289,6 +289,14 @@
                                                 <constraint firstItem="lX3-vF-RSl" firstAttribute="top" secondItem="Gzd-E7-wE7" secondAttribute="bottom" constant="1" id="zNk-xI-JSk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityNameLabel" destination="pAi-Lz-0ik" id="Lq0-D7-KsL"/>
+                                            <outlet property="countryLabel" destination="Yw7-NT-1fR" id="wGg-Vc-Q3B"/>
+                                            <outlet property="geocodeMapView" destination="lX3-vF-RSl" id="vor-68-vzM"/>
+                                            <outlet property="latitudeLabel" destination="Gry-n4-0U3" id="vg8-F1-KGR"/>
+                                            <outlet property="longitudeLabel" destination="j5q-Ko-WdM" id="5wG-aK-Dk5"/>
+                                            <outlet property="stateLabel" destination="Rc8-LR-vwR" id="KAK-hk-dD5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -302,7 +310,10 @@
                             <constraint firstItem="nhA-yU-FgB" firstAttribute="bottom" secondItem="5lD-dz-zTZ" secondAttribute="bottom" id="jem-Kv-YOu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3Kj-tJ-CjK"/>
+                    <navigationItem key="navigationItem" title="Geocoders of the city" id="3Kj-tJ-CjK"/>
+                    <connections>
+                        <outlet property="cityGeocodesTableView" destination="5lD-dz-zTZ" id="4aa-st-85i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQa-05-Mxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

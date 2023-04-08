@@ -6,9 +6,16 @@
 //
 
 import UIKit
+import MapKit
 
 class CityGeocodeCell: UITableViewCell {
-
+    @IBOutlet weak var cityNameLabel : UILabel!
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var geocodeMapView: MKMapView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
