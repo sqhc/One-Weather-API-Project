@@ -78,7 +78,7 @@
         <!--Search for geocodes-->
         <scene sceneID="BnF-Ac-FJB">
             <objects>
-                <viewController id="S66-pG-k2h" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchGeocode" id="S66-pG-k2h" customClass="SearchGeocodeView" customModule="WeatherReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ljZ-H1-wEj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,6 +106,9 @@
                                 <rect key="frame" x="114" y="189" width="188" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="mappin.circle.fill" catalog="system" title="Search with city name"/>
+                                <connections>
+                                    <action selector="searchCityGeocode:" destination="S66-pG-k2h" eventType="touchUpInside" id="5Mo-8q-3GI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search with zip number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AY-0e-4Hb">
                                 <rect key="frame" x="20" y="267" width="374" height="37"/>
@@ -129,6 +132,9 @@
                                 <rect key="frame" x="119" y="369" width="179" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="mappin.and.ellipse" catalog="system" title="Search with zip code"/>
+                                <connections>
+                                    <action selector="searchZipGeocode:" destination="S66-pG-k2h" eventType="touchUpInside" id="82B-oW-p3d"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XjA-44-B8L"/>
@@ -155,10 +161,53 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search for geocodes" id="idG-tb-DiT"/>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="LVA-LB-NgJ" id="7jK-Md-QYJ"/>
+                        <outlet property="zipCodeTextField" destination="jVN-UF-aVo" id="3kX-5F-aGm"/>
+                        <segue destination="Hoh-SZ-boK" kind="show" identifier="searchCityGeocodes" id="8kI-GT-CFZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4M-YW-epi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1808.6956521739132" y="150.66964285714286"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="moA-jX-GgK">
+            <objects>
+                <viewController id="Hoh-SZ-boK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mfL-ha-Ca7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5lD-dz-zTZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PpS-VG-ze2">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PpS-VG-ze2" id="rPk-jn-hXt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nhA-yU-FgB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5lD-dz-zTZ" firstAttribute="leading" secondItem="nhA-yU-FgB" secondAttribute="leading" id="Kmg-cy-UCs"/>
+                            <constraint firstItem="5lD-dz-zTZ" firstAttribute="top" secondItem="nhA-yU-FgB" secondAttribute="top" id="SmB-d1-42f"/>
+                            <constraint firstItem="nhA-yU-FgB" firstAttribute="trailing" secondItem="5lD-dz-zTZ" secondAttribute="trailing" id="Yga-uK-Bod"/>
+                            <constraint firstItem="nhA-yU-FgB" firstAttribute="bottom" secondItem="5lD-dz-zTZ" secondAttribute="bottom" id="jem-Kv-YOu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Kj-tJ-CjK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQa-05-Mxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="879"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eo5-jd-XvV">
