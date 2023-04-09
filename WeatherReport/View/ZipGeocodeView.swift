@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import Dispatch
 
 class ZipGeocodeView: UIViewController {
     @IBOutlet weak var cityNameLabel: UILabel!
@@ -20,8 +21,35 @@ class ZipGeocodeView: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        initVM()
     }
     
+    var viewModel : ZipGeocodeViewModel = {
+        ZipGeocodeViewModel()
+    }()
+    
+    func initVM(){
+        viewModel.getZipGeocodeData { errorMessgae in
+            DispatchQueue.main.async { [weak self] in
+                let alertView = UIAlertController(title: "Error", message: errorMessgae, preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                alertView.addAction(alertAction)
+                self?.present(alertView, animated: true, completion: nil)
+            }
+        }
+        
+        viewModel.setUpData = { [weak self] in
+            DispatchQueue.main.async { [weak self] in
+                self?.cityNameLabel.text = self?.viewModel.zipGeocode.name ?? "Unknown"
+                self?.zipCodeLabel.text = self?.viewModel.zipGeocode.zip ?? "Unknown"
+                self?.latitudeLabel.text = "\(self?.viewModel.zipGeocode.lat ?? 0.0)"
+                self?.longitudeLabel.text = "\(self?.viewModel.zipGeocode.lon ?? 0.0)"
+                self?.countryLabel.text = self?.viewModel.zipGeocode.country ?? "Unknown"
+                self?.setupMapView()
+                self?.setMapRegion()
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -33,4 +61,28 @@ class ZipGeocodeView: UIViewController {
     }
     */
 
+    func setupMapView(){
+        let annotation = MKPointAnnotation()
+        annotation.title = viewModel.zipGeocode.name ?? "Unknown"
+        annotation.coordinate = CLLocationCoordinate2D(latitude: viewModel.zipGeocode.lat ?? 0.0, longitude: viewModel.zipGeocode.lon ?? 0.0)
+        zipGeocodeMapView.addAnnotation(annotation)
+        
+        let identifier = "ZipGeocode"
+        var annotationView = zipGeocodeMapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        if annotationView == nil{
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+        }
+        else{
+            annotationView?.annotation = annotation
+        }
+        zipGeocodeMapView.addSubview(annotationView!)
+    }
+    
+    
+    func setMapRegion(){
+        let span : MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region : MKCoordinateRegion = MKCoordinateRegion.init(center: CLLocationCoordinate2D(latitude: viewModel.zipGeocode.lat ?? 0.0, longitude: viewModel.zipGeocode.lon ?? 0.0), span: span)
+        zipGeocodeMapView.setRegion(region, animated: true)
+    }
 }

@@ -58,6 +58,7 @@ class SearchGeocodeView: UIViewController {
     @IBAction func searchZipGeocode(_ sender: UIButton){
         if viewModel.zip != ""{
             if let vc = storyboard?.instantiateViewController(withIdentifier: "ZipGeocode") as? ZipGeocodeView{
+                vc.viewModel.delegate = self.viewModel
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
