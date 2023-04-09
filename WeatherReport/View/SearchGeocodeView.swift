@@ -22,8 +22,8 @@ class SearchGeocodeView: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        directGeocodeAPI = "http://api.openweathermap.org/geo/1.0/direct?limit=5&appid=a897735e313bdc198b3364fc1753da0b"
-        zipGeocodeAPI = "http://api.openweathermap.org/geo/1.0/zip?appid=a897735e313bdc198b3364fc1753da0b"
+        directGeocodeAPI = "https://api.openweathermap.org/geo/1.0/direct?limit=5&appid=a897735e313bdc198b3364fc1753da0b"
+        zipGeocodeAPI = "https://api.openweathermap.org/geo/1.0/zip?appid=a897735e313bdc198b3364fc1753da0b"
     }
     
     var viewModel: SearchGeocodeViewModel = {
@@ -42,7 +42,10 @@ class SearchGeocodeView: UIViewController {
 
     @IBAction func searchCityGeocode(_ sender: UIButton){
         if viewModel.city != ""{
-            
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "CityGeocodes") as? CityGeocodeTableView{
+                vc.viewModel.delegate = self.viewModel
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
         else{
             let alertView = UIAlertController(title: "No city name!", message: "Please fill in a city name.", preferredStyle: .alert)

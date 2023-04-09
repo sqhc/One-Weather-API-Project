@@ -27,4 +27,39 @@ class CityGeocodeCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    var cellViewModel: CityGeocodeCellModel?{
+        didSet{
+            cityNameLabel.text = cellViewModel?.city ?? "Unknown"
+            latitudeLabel.text = "\(cellViewModel?.lat ?? 0.0)"
+            longitudeLabel.text = "\(cellViewModel?.lon ?? 0.0)"
+            countryLabel.text = cellViewModel?.country ?? "Unknown"
+            stateLabel.text = cellViewModel?.state ?? "Unknown"
+            setupMapView()
+            setMargin()
+        }
+    }
+    
+    func setupMapView(){
+        let annotation = MKPointAnnotation()
+        annotation.title = cellViewModel?.city
+        annotation.coordinate = CLLocationCoordinate2D(latitude: cellViewModel?.lat ?? 0.0, longitude: cellViewModel?.lon ?? 0.0)
+        geocodeMapView.addAnnotation(annotation)
+        
+        let identifier = "CityGeocode"
+        var annotationView = geocodeMapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        if annotationView == nil{
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+        }
+        else{
+            annotationView?.annotation = annotation
+        }
+        geocodeMapView.addSubview(annotationView!)
+    }
+    
+    func setMargin(){
+        let span : MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region : MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: cellViewModel?.lat ?? 0.0, longitude: cellViewModel?.lon ?? 0.0), span: span)
+        geocodeMapView.setRegion(region, animated: true)
+    }
 }

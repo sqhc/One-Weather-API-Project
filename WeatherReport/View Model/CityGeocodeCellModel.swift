@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct CityGeocodeCellModel{
+    let city: String?
+    let lat: Double?
+    let lon: Double?
+    let country: String?
+    let state: String?
+}

@@ -43,6 +43,15 @@ class APIManager: NSObject{
                             complete(false, nil, errorMessgae)
                         }
                     })
+                case .cityGeocodes:
+                    self?.decodeCityGeocodesData(data: data!, complete: { success, geocodes, errorMessage in
+                        if success{
+                            complete(true, geocodes, nil)
+                        }
+                        else{
+                            complete(false, nil, errorMessage)
+                        }
+                    })
                 }
             }
             else{
@@ -82,6 +91,17 @@ class APIManager: NSObject{
             let decoder = JSONDecoder()
             let forecast = try decoder.decode(ForecastWeathers.self, from: data)
             complete(true, forecast, nil)
+        }
+        catch{
+            complete(false, nil, String(describing: error))
+        }
+    }
+    
+    func decodeCityGeocodesData(data: Data, complete: @escaping (_ success: Bool, _ geocodes: [CityGeocode]?, _ errorMessage: String?)->()){
+        do{
+            let decoder = JSONDecoder()
+            let geocodes = try decoder.decode([CityGeocode].self, from: data)
+            complete(true, geocodes, nil)
         }
         catch{
             complete(false, nil, String(describing: error))
