@@ -221,7 +221,7 @@
                         <outlet property="cityNameTextField" destination="LVA-LB-NgJ" id="7jK-Md-QYJ"/>
                         <outlet property="zipCodeTextField" destination="jVN-UF-aVo" id="3kX-5F-aGm"/>
                         <segue destination="Hoh-SZ-boK" kind="show" identifier="searchCityGeocodes" id="8kI-GT-CFZ"/>
-                        <segue destination="NkS-E2-BcI" kind="show" id="XFQ-Am-PKT"/>
+                        <segue destination="NkS-E2-BcI" kind="show" identifier="searchZipGeocode" id="XFQ-Am-PKT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4M-YW-epi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1468,10 +1468,10 @@
             </objects>
             <point key="canvasLocation" x="447.82608695652175" y="878.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Forecast Air Pollutions View-->
         <scene sceneID="sEj-G6-jpI">
             <objects>
-                <viewController storyboardIdentifier="ForecastAirPollutions" id="h9K-fc-00d" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForecastAirPollutions" id="h9K-fc-00d" customClass="ForecastAirPollutionsView" customModule="WeatherReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kOt-jK-29x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1480,7 +1480,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="forecastAirPollution" rowHeight="367" id="A1R-fJ-44G">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="forecastAirPollution" rowHeight="367" id="A1R-fJ-44G" customClass="ForecastAirPollutionCell" customModule="WeatherReport" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A1R-fJ-44G" id="myi-gS-oOx">
@@ -1684,6 +1684,18 @@
                                                 <constraint firstItem="0wA-X4-NNd" firstAttribute="leading" secondItem="myi-gS-oOx" secondAttribute="leadingMargin" constant="127" id="ztV-XW-zhN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="aqiImageView" destination="gi8-Pv-xsZ" id="rEO-9k-wlX"/>
+                                            <outlet property="aqiLabel" destination="xag-UV-u4z" id="QS1-dI-FXT"/>
+                                            <outlet property="coLabel" destination="N51-yd-poq" id="B7J-8u-QNW"/>
+                                            <outlet property="nh3Label" destination="nAd-ee-qcF" id="sPe-5V-adH"/>
+                                            <outlet property="no2Label" destination="YMp-QA-4ic" id="a4A-5U-TU9"/>
+                                            <outlet property="noLabel" destination="urO-VZ-yFV" id="zST-0N-wCH"/>
+                                            <outlet property="o3Label" destination="CPk-QW-4uS" id="kPo-oi-4dm"/>
+                                            <outlet property="pm10Label" destination="bXH-O8-VtZ" id="twf-iR-v1G"/>
+                                            <outlet property="pm2_5Label" destination="vEP-kN-Usq" id="2iI-gn-6HT"/>
+                                            <outlet property="so2Label" destination="FM2-7M-LEu" id="4WP-nQ-SuJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1698,6 +1710,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d2K-eE-nzF"/>
+                    <connections>
+                        <outlet property="forecastAirPollutionsTableView" destination="huo-bD-fbz" id="9Dc-q0-iRs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzb-Y9-V07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

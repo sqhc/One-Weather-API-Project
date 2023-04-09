@@ -33,6 +33,10 @@
 		0649ED6C29E319FF002A1ABB /* AirPollutionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED6B29E319FF002A1ABB /* AirPollutionDataModel.swift */; };
 		0649ED6E29E33B37002A1ABB /* CurrentAirPollutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED6D29E33B37002A1ABB /* CurrentAirPollutionView.swift */; };
 		0649ED7029E33B55002A1ABB /* CurrentAirPollutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED6F29E33B55002A1ABB /* CurrentAirPollutionViewModel.swift */; };
+		0649ED7229E35551002A1ABB /* ForecastAirPollutionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED7129E35551002A1ABB /* ForecastAirPollutionsView.swift */; };
+		0649ED7429E3558E002A1ABB /* ForecastAirPollutionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED7329E3558E002A1ABB /* ForecastAirPollutionCell.swift */; };
+		0649ED7629E355ED002A1ABB /* ForecastAirPollutionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED7529E355ED002A1ABB /* ForecastAirPollutionsViewModel.swift */; };
+		0649ED7829E3560E002A1ABB /* ForecastAirPollutionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED7729E3560E002A1ABB /* ForecastAirPollutionCellModel.swift */; };
 		065606FD29DCB7A800969B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065606FC29DCB7A800969B01 /* AppDelegate.swift */; };
 		065606FF29DCB7A800969B01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065606FE29DCB7A800969B01 /* SceneDelegate.swift */; };
 		0656070129DCB7A800969B01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656070029DCB7A800969B01 /* ViewController.swift */; };
@@ -89,6 +93,10 @@
 		0649ED6B29E319FF002A1ABB /* AirPollutionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirPollutionDataModel.swift; sourceTree = "<group>"; };
 		0649ED6D29E33B37002A1ABB /* CurrentAirPollutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAirPollutionView.swift; sourceTree = "<group>"; };
 		0649ED6F29E33B55002A1ABB /* CurrentAirPollutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentAirPollutionViewModel.swift; sourceTree = "<group>"; };
+		0649ED7129E35551002A1ABB /* ForecastAirPollutionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastAirPollutionsView.swift; sourceTree = "<group>"; };
+		0649ED7329E3558E002A1ABB /* ForecastAirPollutionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastAirPollutionCell.swift; sourceTree = "<group>"; };
+		0649ED7529E355ED002A1ABB /* ForecastAirPollutionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastAirPollutionsViewModel.swift; sourceTree = "<group>"; };
+		0649ED7729E3560E002A1ABB /* ForecastAirPollutionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastAirPollutionCellModel.swift; sourceTree = "<group>"; };
 		065606F929DCB7A800969B01 /* WeatherReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065606FC29DCB7A800969B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		065606FE29DCB7A800969B01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +158,8 @@
 				0649ED5329DFA652002A1ABB /* ForecastWeatherCell.swift */,
 				0649ED6729E31863002A1ABB /* SearchAirPollutionView.swift */,
 				0649ED6D29E33B37002A1ABB /* CurrentAirPollutionView.swift */,
+				0649ED7129E35551002A1ABB /* ForecastAirPollutionsView.swift */,
+				0649ED7329E3558E002A1ABB /* ForecastAirPollutionCell.swift */,
 				0649ED5729E1F6BF002A1ABB /* SearchGeocodeView.swift */,
 				0649ED5B29E20962002A1ABB /* CityGeocodeTableView.swift */,
 				0649ED5D29E20992002A1ABB /* CityGeocodeCell.swift */,
@@ -167,6 +177,8 @@
 				0649ED5129DF9F83002A1ABB /* ForecastWeatherCellViewModel.swift */,
 				0649ED6929E319E0002A1ABB /* SearchAirPollutionViewModel.swift */,
 				0649ED6F29E33B55002A1ABB /* CurrentAirPollutionViewModel.swift */,
+				0649ED7529E355ED002A1ABB /* ForecastAirPollutionsViewModel.swift */,
+				0649ED7729E3560E002A1ABB /* ForecastAirPollutionCellModel.swift */,
 				0649ED5929E1F8EB002A1ABB /* SearchGeocodeViewModel.swift */,
 				0649ED5F29E20A9A002A1ABB /* CityGeocodesViewModel.swift */,
 				0649ED6129E20ACC002A1ABB /* CityGeocodeCellModel.swift */,
@@ -377,9 +389,11 @@
 				0649ED5C29E20962002A1ABB /* CityGeocodeTableView.swift in Sources */,
 				0649ED7029E33B55002A1ABB /* CurrentAirPollutionViewModel.swift in Sources */,
 				0649ED6629E2559F002A1ABB /* ZipGeocodeViewModel.swift in Sources */,
+				0649ED7229E35551002A1ABB /* ForecastAirPollutionsView.swift in Sources */,
 				0649ED6E29E33B37002A1ABB /* CurrentAirPollutionView.swift in Sources */,
 				0649ED4E29DF9F25002A1ABB /* ForecastWeathersView.swift in Sources */,
 				0649ED6429E25563002A1ABB /* ZipGeocodeView.swift in Sources */,
+				0649ED7429E3558E002A1ABB /* ForecastAirPollutionCell.swift in Sources */,
 				0649ED6C29E319FF002A1ABB /* AirPollutionDataModel.swift in Sources */,
 				0600B0FD29DD11D80019CD51 /* WeatherDataModel.swift in Sources */,
 				0600B10829DF5CB90019CD51 /* ForecastWeatherDataModel.swift in Sources */,
@@ -387,10 +401,12 @@
 				0649ED5829E1F6BF002A1ABB /* SearchGeocodeView.swift in Sources */,
 				0649ED6229E20ACC002A1ABB /* CityGeocodeCellModel.swift in Sources */,
 				0656070729DCB7A800969B01 /* WeatherReport.xcdatamodeld in Sources */,
+				0649ED7829E3560E002A1ABB /* ForecastAirPollutionCellModel.swift in Sources */,
 				0649ED5429DFA652002A1ABB /* ForecastWeatherCell.swift in Sources */,
 				065606FF29DCB7A800969B01 /* SceneDelegate.swift in Sources */,
 				0600B0FB29DD03A00019CD51 /* Global.swift in Sources */,
 				0600B10329DDF8830019CD51 /* CurrentWeatherViewModel.swift in Sources */,
+				0649ED7629E355ED002A1ABB /* ForecastAirPollutionsViewModel.swift in Sources */,
 				0649ED5A29E1F8EB002A1ABB /* SearchGeocodeViewModel.swift in Sources */,
 				0649ED5029DF9F66002A1ABB /* ForecastWeathersTableViewModel.swift in Sources */,
 			);
