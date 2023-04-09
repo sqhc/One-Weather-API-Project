@@ -26,6 +26,8 @@
 		0649ED5E29E20992002A1ABB /* CityGeocodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED5D29E20992002A1ABB /* CityGeocodeCell.swift */; };
 		0649ED6029E20A9A002A1ABB /* CityGeocodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED5F29E20A9A002A1ABB /* CityGeocodesViewModel.swift */; };
 		0649ED6229E20ACC002A1ABB /* CityGeocodeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED6129E20ACC002A1ABB /* CityGeocodeCellModel.swift */; };
+		0649ED6429E25563002A1ABB /* ZipGeocodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED6329E25563002A1ABB /* ZipGeocodeView.swift */; };
+		0649ED6629E2559F002A1ABB /* ZipGeocodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649ED6529E2559F002A1ABB /* ZipGeocodeViewModel.swift */; };
 		065606FD29DCB7A800969B01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065606FC29DCB7A800969B01 /* AppDelegate.swift */; };
 		065606FF29DCB7A800969B01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065606FE29DCB7A800969B01 /* SceneDelegate.swift */; };
 		0656070129DCB7A800969B01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656070029DCB7A800969B01 /* ViewController.swift */; };
@@ -75,6 +77,8 @@
 		0649ED5D29E20992002A1ABB /* CityGeocodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodeCell.swift; sourceTree = "<group>"; };
 		0649ED5F29E20A9A002A1ABB /* CityGeocodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodesViewModel.swift; sourceTree = "<group>"; };
 		0649ED6129E20ACC002A1ABB /* CityGeocodeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodeCellModel.swift; sourceTree = "<group>"; };
+		0649ED6329E25563002A1ABB /* ZipGeocodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipGeocodeView.swift; sourceTree = "<group>"; };
+		0649ED6529E2559F002A1ABB /* ZipGeocodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipGeocodeViewModel.swift; sourceTree = "<group>"; };
 		065606F929DCB7A800969B01 /* WeatherReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065606FC29DCB7A800969B01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		065606FE29DCB7A800969B01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				0649ED5729E1F6BF002A1ABB /* SearchGeocodeView.swift */,
 				0649ED5B29E20962002A1ABB /* CityGeocodeTableView.swift */,
 				0649ED5D29E20992002A1ABB /* CityGeocodeCell.swift */,
+				0649ED6329E25563002A1ABB /* ZipGeocodeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				0649ED5929E1F8EB002A1ABB /* SearchGeocodeViewModel.swift */,
 				0649ED5F29E20A9A002A1ABB /* CityGeocodesViewModel.swift */,
 				0649ED6129E20ACC002A1ABB /* CityGeocodeCellModel.swift */,
+				0649ED6529E2559F002A1ABB /* ZipGeocodeViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -352,7 +358,9 @@
 				0600B0FF29DD1F060019CD51 /* APIManager.swift in Sources */,
 				0600B0F729DCFA4D0019CD51 /* LocationManager.swift in Sources */,
 				0649ED5C29E20962002A1ABB /* CityGeocodeTableView.swift in Sources */,
+				0649ED6629E2559F002A1ABB /* ZipGeocodeViewModel.swift in Sources */,
 				0649ED4E29DF9F25002A1ABB /* ForecastWeathersView.swift in Sources */,
+				0649ED6429E25563002A1ABB /* ZipGeocodeView.swift in Sources */,
 				0600B0FD29DD11D80019CD51 /* WeatherDataModel.swift in Sources */,
 				0600B10829DF5CB90019CD51 /* ForecastWeatherDataModel.swift in Sources */,
 				0649ED5229DF9F83002A1ABB /* ForecastWeatherCellViewModel.swift in Sources */,

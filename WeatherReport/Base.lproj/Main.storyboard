@@ -320,10 +320,10 @@
             </objects>
             <point key="canvasLocation" x="1808.6956521739132" y="878.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Zip Geocode View-->
         <scene sceneID="wT7-cv-Fwa">
             <objects>
-                <viewController storyboardIdentifier="ZipGeocode" id="NkS-E2-BcI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ZipGeocode" id="NkS-E2-BcI" customClass="ZipGeocodeView" customModule="WeatherReport" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e3X-Fc-0nu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -427,6 +427,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oco-fb-eIJ"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="lv9-LT-67M" id="Ujq-T0-y2O"/>
+                        <outlet property="countryLabel" destination="jrw-nP-ACv" id="rQ7-Xf-Phl"/>
+                        <outlet property="latitudeLabel" destination="xMP-9G-zip" id="8Tv-ya-bEz"/>
+                        <outlet property="longitudeLabel" destination="AKR-EP-42G" id="TAx-05-0tY"/>
+                        <outlet property="zipCodeLabel" destination="EJC-ZA-Pu9" id="bE9-e5-RpT"/>
+                        <outlet property="zipGeocodeMapView" destination="Pi3-aQ-0PO" id="njG-3U-VWU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69z-pU-LWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

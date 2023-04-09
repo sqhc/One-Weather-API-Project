@@ -11,6 +11,7 @@ enum SearchOptions{
     case currentWeather
     case forecastWeathers
     case cityGeocodes
+    case zipGeocode
 }
 
 enum caseOption{

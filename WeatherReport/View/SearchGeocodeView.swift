@@ -57,7 +57,9 @@ class SearchGeocodeView: UIViewController {
     
     @IBAction func searchZipGeocode(_ sender: UIButton){
         if viewModel.zip != ""{
-            
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "ZipGeocode") as? ZipGeocodeView{
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
         else{
             let alertView = UIAlertController(title: "No zip code!", message: "Please fill in a zip code.", preferredStyle: .alert)
