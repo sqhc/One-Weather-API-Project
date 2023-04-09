@@ -165,6 +165,7 @@
                         <outlet property="cityNameTextField" destination="LVA-LB-NgJ" id="7jK-Md-QYJ"/>
                         <outlet property="zipCodeTextField" destination="jVN-UF-aVo" id="3kX-5F-aGm"/>
                         <segue destination="Hoh-SZ-boK" kind="show" identifier="searchCityGeocodes" id="8kI-GT-CFZ"/>
+                        <segue destination="NkS-E2-BcI" kind="show" id="XFQ-Am-PKT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4M-YW-epi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -318,6 +319,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQa-05-Mxa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1808.6956521739132" y="878.57142857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wT7-cv-Fwa">
+            <objects>
+                <viewController storyboardIdentifier="ZipGeocode" id="NkS-E2-BcI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e3X-Fc-0nu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CityNameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv9-LT-67M">
+                                <rect key="frame" x="20" y="88" width="374" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="0qi-fI-gua"/>
+                                    <constraint firstAttribute="height" constant="37" id="X2q-zv-Fnb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zip:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpi-et-bxm">
+                                <rect key="frame" x="20" y="133" width="34" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZipCodeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJC-ZA-Pu9">
+                                <rect key="frame" x="62" y="135" width="124" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfM-Ij-Iuq">
+                                <rect key="frame" x="20" y="165" width="33" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LatitudeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMP-9G-zip">
+                                <rect key="frame" x="62" y="167" width="120" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lon:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js1-KZ-ltm">
+                                <rect key="frame" x="205" y="168" width="38" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LongitudeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKR-EP-42G">
+                                <rect key="frame" x="251" y="170" width="136" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxl-m0-7BP">
+                                <rect key="frame" x="20" y="197" width="76" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountryLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrw-nP-ACv">
+                                <rect key="frame" x="104" y="200" width="119" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pi3-aQ-0PO">
+                                <rect key="frame" x="20" y="344" width="367" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="367" id="FJL-7D-b99"/>
+                                    <constraint firstAttribute="height" constant="196" id="PmS-ho-Y9i"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H8n-cU-dDO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qxl-m0-7BP" firstAttribute="top" secondItem="xMP-9G-zip" secondAttribute="bottom" constant="6" id="2Ps-aZ-YZE"/>
+                            <constraint firstItem="lv9-LT-67M" firstAttribute="leading" secondItem="H8n-cU-dDO" secondAttribute="leading" constant="20" id="3Hl-jE-EbW"/>
+                            <constraint firstItem="js1-KZ-ltm" firstAttribute="top" secondItem="lv9-LT-67M" secondAttribute="bottom" constant="43" id="4I2-3F-f5S"/>
+                            <constraint firstItem="Pi3-aQ-0PO" firstAttribute="top" secondItem="qxl-m0-7BP" secondAttribute="bottom" constant="123" id="4N1-w7-IN9"/>
+                            <constraint firstItem="H8n-cU-dDO" firstAttribute="bottom" secondItem="Pi3-aQ-0PO" secondAttribute="bottom" constant="273" id="4pl-Yf-fYg"/>
+                            <constraint firstItem="jrw-nP-ACv" firstAttribute="top" secondItem="js1-KZ-ltm" secondAttribute="bottom" constant="8" symbolic="YES" id="8EK-ke-KGk"/>
+                            <constraint firstItem="H8n-cU-dDO" firstAttribute="trailing" secondItem="jrw-nP-ACv" secondAttribute="trailing" constant="191" id="8nD-bL-YYN"/>
+                            <constraint firstItem="AKR-EP-42G" firstAttribute="leading" secondItem="js1-KZ-ltm" secondAttribute="trailing" constant="8" symbolic="YES" id="ALw-bn-7eF"/>
+                            <constraint firstItem="LfM-Ij-Iuq" firstAttribute="top" secondItem="rpi-et-bxm" secondAttribute="bottom" constant="8" symbolic="YES" id="BZf-3O-Giq"/>
+                            <constraint firstItem="js1-KZ-ltm" firstAttribute="leading" secondItem="xMP-9G-zip" secondAttribute="trailing" constant="23" id="Bnj-lk-r3v"/>
+                            <constraint firstItem="jrw-nP-ACv" firstAttribute="leading" secondItem="qxl-m0-7BP" secondAttribute="trailing" constant="8" symbolic="YES" id="Gpd-7H-hSO"/>
+                            <constraint firstItem="H8n-cU-dDO" firstAttribute="trailing" secondItem="Pi3-aQ-0PO" secondAttribute="trailing" constant="27" id="GzS-F9-dJy"/>
+                            <constraint firstItem="xMP-9G-zip" firstAttribute="top" secondItem="EJC-ZA-Pu9" secondAttribute="bottom" constant="8" symbolic="YES" id="L4r-Ec-4Rw"/>
+                            <constraint firstItem="H8n-cU-dDO" firstAttribute="trailing" secondItem="EJC-ZA-Pu9" secondAttribute="trailing" constant="228" id="LXq-aP-1mU"/>
+                            <constraint firstItem="H8n-cU-dDO" firstAttribute="trailing" secondItem="lv9-LT-67M" secondAttribute="trailing" constant="20" id="Nc2-Hl-YoZ"/>
+                            <constraint firstItem="rpi-et-bxm" firstAttribute="top" secondItem="lv9-LT-67M" secondAttribute="bottom" constant="8" symbolic="YES" id="O21-Xe-g6g"/>
+                            <constraint firstItem="H8n-cU-dDO" firstAttribute="trailing" secondItem="AKR-EP-42G" secondAttribute="trailing" constant="27" id="SPR-u2-L7d"/>
+                            <constraint firstItem="lv9-LT-67M" firstAttribute="top" secondItem="H8n-cU-dDO" secondAttribute="top" id="TkY-WS-8Hh"/>
+                            <constraint firstItem="Pi3-aQ-0PO" firstAttribute="leading" secondItem="H8n-cU-dDO" secondAttribute="leading" constant="20" id="Vu5-NE-uFK"/>
+                            <constraint firstItem="EJC-ZA-Pu9" firstAttribute="top" secondItem="lv9-LT-67M" secondAttribute="bottom" constant="10" id="Xkw-Ou-1Gz"/>
+                            <constraint firstItem="AKR-EP-42G" firstAttribute="top" secondItem="lv9-LT-67M" secondAttribute="bottom" constant="45" id="Yvn-xS-PcT"/>
+                            <constraint firstItem="qxl-m0-7BP" firstAttribute="leading" secondItem="H8n-cU-dDO" secondAttribute="leading" constant="20" id="Zwg-jq-3MF"/>
+                            <constraint firstItem="Pi3-aQ-0PO" firstAttribute="top" secondItem="jrw-nP-ACv" secondAttribute="bottom" constant="120" id="gX0-CN-XPK"/>
+                            <constraint firstItem="LfM-Ij-Iuq" firstAttribute="leading" secondItem="H8n-cU-dDO" secondAttribute="leading" constant="20" id="jqD-76-ItO"/>
+                            <constraint firstItem="EJC-ZA-Pu9" firstAttribute="leading" secondItem="rpi-et-bxm" secondAttribute="trailing" constant="8" symbolic="YES" id="oAB-xl-Kcc"/>
+                            <constraint firstItem="xMP-9G-zip" firstAttribute="leading" secondItem="LfM-Ij-Iuq" secondAttribute="trailing" constant="9" id="rJK-qj-xEQ"/>
+                            <constraint firstItem="rpi-et-bxm" firstAttribute="leading" secondItem="H8n-cU-dDO" secondAttribute="leading" constant="20" id="rWf-iH-44L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oco-fb-eIJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69z-pU-LWQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694.202898550725" y="878.57142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eo5-jd-XvV">
