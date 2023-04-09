@@ -1449,6 +1449,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Current Air Pollution" id="6b4-gL-6ty"/>
+                    <connections>
+                        <outlet property="airPollutionMapView" destination="0ac-vv-1VH" id="T50-45-KL5"/>
+                        <outlet property="aqiImageView" destination="ec5-ts-yQe" id="CRD-DH-xPS"/>
+                        <outlet property="aqiLabel" destination="ttS-7e-CxH" id="AQO-cq-1e0"/>
+                        <outlet property="coLabel" destination="JBU-Ih-XOk" id="t76-Zy-oLP"/>
+                        <outlet property="nh3Label" destination="X7b-C6-Tk3" id="lcN-qr-gYa"/>
+                        <outlet property="no2Label" destination="pYs-Kq-Hln" id="icE-X8-UHt"/>
+                        <outlet property="noLabel" destination="OgA-ik-2t6" id="du3-JW-SPT"/>
+                        <outlet property="o3Label" destination="Oby-Tb-t2c" id="uFp-J8-wmd"/>
+                        <outlet property="pm10Label" destination="yQR-fg-Fl3" id="R88-y2-hMC"/>
+                        <outlet property="pm2_5Label" destination="JEB-jp-GMF" id="zhC-pi-8mv"/>
+                        <outlet property="so2Label" destination="80X-R6-feK" id="kIv-Sy-UPA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeI-WK-YIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

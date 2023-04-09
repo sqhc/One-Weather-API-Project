@@ -16,6 +16,12 @@ class SearchAirPollutionView: UIViewController {
         viewModel.getAuthorization()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        currentAirPollutionAPI = "https://api.openweathermap.org/data/2.5/air_pollution?appid=a897735e313bdc198b3364fc1753da0b"
+        forecastAirPollutionAPI = "https://api.openweathermap.org/data/2.5/air_pollution/forecast?appid=a897735e313bdc198b3364fc1753da0b"
+    }
+    
     var viewModel: SearchAirPollutionViewModel = {
         SearchAirPollutionViewModel()
     }()
@@ -32,6 +38,7 @@ class SearchAirPollutionView: UIViewController {
     @IBAction func currentAirPollution(_ sender: UIButton){
         viewModel.getLocation()
         if let vc = storyboard?.instantiateViewController(withIdentifier: "CurrentAirPollution") as? CurrentAirPollutionView{
+            vc.viewModel.delegate = self.viewModel
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
